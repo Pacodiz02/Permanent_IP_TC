@@ -1,0 +1,5 @@
+Start QEMU with /usr/bin/qemu-system-i386 -name PC1 -m 256M -smp cpus=1,sockets=1 -enable-kvm -boot order=c -drive file=/home/usuario/GNS3/projects/NAT/project-files/qemu/b6cb15b3-473c-43ae-b864-5f99bdb0d5c2/hda_disk.qcow2,if=ide,index=0,media=disk,id=drive0 -uuid b6cb15b3-473c-43ae-b864-5f99bdb0d5c2 -vnc localhost:1 -monitor tcp:127.0.0.1:46483,server,nowait -net none -device e1000,mac=0c:cb:15:b3:00:00,netdev=gns3-0 -netdev socket,id=gns3-0,udp=127.0.0.1:10037,localaddr=127.0.0.1:10036 -vga std -usbdevice tablet
+
+Execution log:
+qemu-system-i386: -usbdevice tablet: '-usbdevice' is deprecated, please use '-device usb-...' instead
+qemu-system-i386: terminating on signal 15 from pid 6654 (/usr/bin/python3)
